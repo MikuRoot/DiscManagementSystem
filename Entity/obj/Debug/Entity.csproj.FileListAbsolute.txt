@@ -1,0 +1,24 @@
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\Entity.dll.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\Entity.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\Entity.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.xml
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.csproj.CopyComplete
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\Entity.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\Entity.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\Entity.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.xml
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.csproj.CopyComplete
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Entity\obj\Debug\Entity.csprojAssemblyReference.cache

@@ -1,0 +1,36 @@
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Bussiness.dll.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Bussiness.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Bussiness.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\DataAccess.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Entity.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.SqlServer.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\DataAccess.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\DataAccess.dll.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Entity.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Entity.dll.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.xml
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.SqlServer.xml
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.csprojAssemblyReference.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.csproj.CopyComplete
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Bussiness.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Bussiness.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Bussiness.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\DataAccess.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Entity.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.SqlServer.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\DataAccess.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\DataAccess.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Entity.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\Entity.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.xml
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\bin\Debug\EntityFramework.SqlServer.xml
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.csprojAssemblyReference.cache
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.cache
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.csproj.CopyComplete
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\Bussiness\obj\Debug\Bussiness.pdb

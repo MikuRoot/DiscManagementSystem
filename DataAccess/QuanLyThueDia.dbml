@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyChoThueBangDia" Class="QuanLyThueDiaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-AVRRJEK\MIKUROOT;Initial Catalog=QuanLyChoThueBangDia;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="QuanLyChoThueBangDiaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dias" Member="Dias">
+    <Type Name="Dia">
+      <Column Name="MaDia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TinhTrangThue" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TinhTrangDia" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IDTuaDe" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="IDLoaiDia" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Dia_NhatKyGhiNo" Member="NhatKyGhiNos" ThisKey="MaDia" OtherKey="IDDia" Type="NhatKyGhiNo" />
+      <Association Name="LoaiDia_Dia" Member="LoaiDia" ThisKey="IDLoaiDia" OtherKey="MaLoai" Type="LoaiDia" IsForeignKey="true" />
+      <Association Name="TuaDe_Dia" Member="TuaDe" ThisKey="IDTuaDe" OtherKey="MaTuaDe" Type="TuaDe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHangs" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="MaKhachHang" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhachHang" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Association Name="KhachHang_NhatKyGhiNo" Member="NhatKyGhiNos" ThisKey="MaKhachHang" OtherKey="IDKhachHang" Type="NhatKyGhiNo" />
+      <Association Name="KhachHang_HangDoi" Member="HangDois" ThisKey="MaKhachHang" OtherKey="MaKhacHangs" Type="HangDoi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiDias" Member="LoaiDias">
+    <Type Name="LoaiDia">
+      <Column Name="MaLoai" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianChoPhepThue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GiaThue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="LoaiDia_Dia" Member="Dias" ThisKey="MaLoai" OtherKey="IDLoaiDia" Type="Dia" />
+      <Association Name="LoaiDia_TuaDe" Member="TuaDes" ThisKey="MaLoai" OtherKey="MaLoai" Type="TuaDe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Logins" Member="Logins">
+    <Type Name="Login">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pass" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhatKyGhiNo" Member="NhatKyGhiNos">
+    <Type Name="NhatKyGhiNo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDKhachHang" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="IDDia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoTienNo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Dia_NhatKyGhiNo" Member="Dia" ThisKey="IDDia" OtherKey="MaDia" Type="Dia" IsForeignKey="true" />
+      <Association Name="KhachHang_NhatKyGhiNo" Member="KhachHang" ThisKey="IDKhachHang" OtherKey="MaKhachHang" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhatKyThueDia" Member="NhatKyThueDias">
+    <Type Name="NhatKyThueDia">
+      <Column Name="NgayChoThue" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MaTua" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MaDia" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuongThue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TienDatCoc" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PhiTreHen" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="NgayTraDia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tinhtrangtradia" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TuaDes" Member="TuaDes">
+    <Type Name="TuaDe">
+      <Column Name="MaTuaDe" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NoiDungTuaDe" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SoLuongDia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaLoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="TuaDe_Dia" Member="Dias" ThisKey="MaTuaDe" OtherKey="IDTuaDe" Type="Dia" />
+      <Association Name="TuaDe_HangDoi" Member="HangDois" ThisKey="MaTuaDe" OtherKey="MaTuaDe" Type="HangDoi" />
+      <Association Name="LoaiDia_TuaDe" Member="LoaiDia" ThisKey="MaLoai" OtherKey="MaLoai" Type="LoaiDia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HangDois" Member="HangDois">
+    <Type Name="HangDoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaKhacHangs" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTuaDe" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ThuTu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuongDat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KhachHang_HangDoi" Member="KhachHang" ThisKey="MaKhacHangs" OtherKey="MaKhachHang" Type="KhachHang" IsForeignKey="true" />
+      <Association Name="TuaDe_HangDoi" Member="TuaDe" ThisKey="MaTuaDe" OtherKey="MaTuaDe" Type="TuaDe" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

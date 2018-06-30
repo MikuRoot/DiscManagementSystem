@@ -1,0 +1,61 @@
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\UIs.exe.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\UIs.exe
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\UIs.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.SqlServer.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.xml
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.SqlServer.xml
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csprojAssemblyReference.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.Form1.resources
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.frmAdmin.resources
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.frmlogin.resources
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.Properties.Resources.resources
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csproj.GenerateResource.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csproj.CoreCompileInputs.cache
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csproj.CopyComplete
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.exe
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Bussiness.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Entity.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Bussiness.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Bussiness.dll.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Entity.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Entity.dll.config
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\DataAccess.dll
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\DataAccess.pdb
+D:\Product\CSharpProducts\Xây dựng phần mềm\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\DataAccess.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\UIs.exe.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\UIs.exe
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\UIs.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Bussiness.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Entity.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.SqlServer.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\DataAccess.dll
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Bussiness.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Bussiness.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Entity.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\Entity.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.xml
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\EntityFramework.SqlServer.xml
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\DataAccess.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\bin\Debug\DataAccess.dll.config
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csprojAssemblyReference.cache
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.frmAdmin.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.frmlogin.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.Properties.Resources.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csproj.GenerateResource.cache
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csproj.CoreCompileInputs.cache
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.csproj.CopyComplete
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.exe
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.pdb
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucChoThueDia.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.uclaythongtinphitre.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucmain.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucThemKhachHang.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucGhiNhanTraDia.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucDatCho.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucHuyCho.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucBaoCaoTinhTrangCuaDia.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucCapNhatThongTinKhachHang.resources
+D:\Product\CSharpProducts\XayDungPhanMem\Quan_Ly_Cho_Thue_Bang_Dia\UIs\obj\Debug\UIs.ucCapnhatphitre.resources
