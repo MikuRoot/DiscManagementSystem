@@ -28,13 +28,13 @@ namespace UIs
             Regex kiemtrasodienthoai = new Regex(@"^(09|01[2|6|8|9])+([0-9]{8})\b$");
             if (!kiemtraten.IsMatch(txttenkhachhang.Text))
             {
-                lblalertenkhachhang.Text = "Tên khách hàng không hợp lệ,vui lòng nhập lại";
-                lblalertenkhachhang.ForeColor = Color.Red;
+                txttenkhachhang.Text = "Tên khách hàng không hợp lệ";
+                txttenkhachhang.ForeColor = Color.Red;
             }
             if (!kiemtrasodienthoai.IsMatch(txtsodienthoai.Text))
             {
-                lblalertsodienthoai.Text = "Số điện thoại không hợp lệ,xin vui lòng nhập lại";
-                lblalertsodienthoai.ForeColor = Color.Red;
+                txtsodienthoai.Text = "Số điện thoại không hợp lệ,xin vui lòng nhập lại";
+                txtsodienthoai.ForeColor = Color.Red;
             }
             if (kiemtraten.IsMatch(txttenkhachhang.Text) && kiemtrasodienthoai.IsMatch(txtsodienthoai.Text))
             {
@@ -87,7 +87,7 @@ namespace UIs
 
         private void txttenkhachhang_Click(object sender, EventArgs e)
         {
-            if (txttenkhachhang.Text == "Tên khách hàng")
+            if (txttenkhachhang.Text == "Tên khách hàng" ||txttenkhachhang.Text== "Vui lòng nhập tên khách hàng")
             {
                 txttenkhachhang.Clear();
             }
@@ -95,9 +95,9 @@ namespace UIs
 
         private void txtsodienthoai_Click(object sender, EventArgs e)
         {
-            if (txttenkhachhang.Text == "Số điện thoại")
+            if (txtsodienthoai.Text == "Số điện thoại" || txtsodienthoai.Text=="Vui lòng nhập số điện thoại")
             {
-                txttenkhachhang.Clear();
+                txtsodienthoai.Clear();
             }
         }
 
@@ -106,5 +106,20 @@ namespace UIs
 
         }
 
+        private void txttenkhachhang_Leave(object sender, EventArgs e)
+        {
+            if (txttenkhachhang.Text == "")
+            {
+                txttenkhachhang.Text = "Vui lòng nhập tên khách hàng";
+            }
+        }
+
+        private void txtsodienthoai_Leave(object sender, EventArgs e)
+        {
+            if (txtsodienthoai.Text == "")
+            {
+                txtsodienthoai.Text = "Vui lòng nhập số điện thoại";
+            }
+        }
     }
 }

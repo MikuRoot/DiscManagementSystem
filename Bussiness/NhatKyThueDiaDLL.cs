@@ -40,9 +40,9 @@ namespace Bussiness
             }
         }
 
-        public void ChinhTrangThaiThueDia(int id,string status)
+        public void ChinhTrangThaiThueDia(int madia,string status)
         {
-            Dia dia = db.Dias.Where(x => x.MaDia == id).FirstOrDefault();
+            Dia dia = db.Dias.Where(x => x.MaDia == madia).FirstOrDefault();
             dia.TinhTrangThue = status;
             db.SubmitChanges();
         }
@@ -112,9 +112,9 @@ namespace Bussiness
             db.SubmitChanges();
         }
 
-        public void ChinhSuaTinhTrangTraDia(int id,string text)
+        public void ChinhSuaTinhTrangTraDia(int manhatky,string text)
         {
-            NhatKyThueDia diary = db.NhatKyThueDias.Where(x => x.ID==id).FirstOrDefault();
+            NhatKyThueDia diary = db.NhatKyThueDias.Where(x => x.ID== manhatky).FirstOrDefault();
             diary.tinhtrangtradia = text;
             db.SubmitChanges();
         }

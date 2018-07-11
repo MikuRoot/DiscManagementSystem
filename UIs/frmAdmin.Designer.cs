@@ -466,6 +466,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmAdmin";
             this.Text = "Hệ thống cửa hàng";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.panel2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

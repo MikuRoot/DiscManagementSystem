@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnvehome = new System.Windows.Forms.Button();
             this.btnthemkhachhang = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -42,23 +41,12 @@
             this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnvehome
-            // 
-            this.btnvehome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvehome.Location = new System.Drawing.Point(237, 236);
-            this.btnvehome.Name = "btnvehome";
-            this.btnvehome.Size = new System.Drawing.Size(159, 45);
-            this.btnvehome.TabIndex = 24;
-            this.btnvehome.Text = "<< Về danh sách đĩa";
-            this.btnvehome.UseVisualStyleBackColor = true;
-            this.btnvehome.Click += new System.EventHandler(this.btnvehome_Click);
-            // 
             // btnthemkhachhang
             // 
             this.btnthemkhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthemkhachhang.Location = new System.Drawing.Point(476, 236);
+            this.btnthemkhachhang.Location = new System.Drawing.Point(273, 238);
             this.btnthemkhachhang.Name = "btnthemkhachhang";
-            this.btnthemkhachhang.Size = new System.Drawing.Size(159, 45);
+            this.btnthemkhachhang.Size = new System.Drawing.Size(324, 45);
             this.btnthemkhachhang.TabIndex = 23;
             this.btnthemkhachhang.Text = ". Lưu .";
             this.btnthemkhachhang.UseVisualStyleBackColor = true;
@@ -132,6 +120,7 @@
             this.txtsodienthoai.Text = "Số điện thoại";
             this.txtsodienthoai.Click += new System.EventHandler(this.txtsodienthoai_Click);
             this.txtsodienthoai.TextChanged += new System.EventHandler(this.txtsodienthoai_TextChanged);
+            this.txtsodienthoai.Leave += new System.EventHandler(this.txtsodienthoai_Leave);
             // 
             // txttenkhachhang
             // 
@@ -143,12 +132,12 @@
             this.txttenkhachhang.Text = "Tên khách hàng";
             this.txttenkhachhang.Click += new System.EventHandler(this.txttenkhachhang_Click);
             this.txttenkhachhang.TextChanged += new System.EventHandler(this.txttenkhachhang_TextChanged);
+            this.txttenkhachhang.Leave += new System.EventHandler(this.txttenkhachhang_Leave);
             // 
             // ucThemKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnvehome);
             this.Controls.Add(this.btnthemkhachhang);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox8);
@@ -165,8 +154,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnvehome;
         private System.Windows.Forms.Button btnthemkhachhang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox8;

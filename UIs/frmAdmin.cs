@@ -17,6 +17,7 @@ namespace UIs
         //LoaiDiaDLL loaidiabll = new LoaiDiaDLL();
         //DiaBLL diabll = new DiaBLL();
         //TuaDeBll tuadebll = new TuaDeBll();
+        public static string signal = "Hide";
 
         public frmAdmin()
         {
@@ -183,10 +184,8 @@ namespace UIs
 
         private void btndangnhap_Click(object sender, EventArgs e)
         {
-            lblroll.Text = "Quản lý";
-            btndangnhap.Enabled = false;
-            btndangxuat.Enabled = true;
-            Enable_Admin_Feature();
+            frmlogin dangnhap = new frmlogin();
+            dangnhap.ShowDialog();
         }
 
         private void btndangxuat_Click(object sender, EventArgs e)
@@ -203,6 +202,24 @@ namespace UIs
             UserControl x = userControl;
             x.Dock = DockStyle.Fill;
             panel3.Controls.Add(x);
+        }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            if (signal == "Hide")
+            {
+                lblroll.Text = "Nhân viên";
+                btndangnhap.Enabled = true;
+                btndangxuat.Enabled = false;
+                Disable_Admin_Feature();
+            }
+            if(signal=="Access grand")
+            {
+                lblroll.Text = "Quản lý";
+                btndangnhap.Enabled = false;
+                btndangxuat.Enabled = true;
+                Enable_Admin_Feature();
+            }
         }
     }
 }

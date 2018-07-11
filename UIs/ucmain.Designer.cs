@@ -150,7 +150,10 @@
             // 
             this.dgvdia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdia.Location = new System.Drawing.Point(3, 30);
+            this.dgvdia.MultiSelect = false;
             this.dgvdia.Name = "dgvdia";
+            this.dgvdia.ReadOnly = true;
+            this.dgvdia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdia.Size = new System.Drawing.Size(872, 294);
             this.dgvdia.TabIndex = 20;
             this.dgvdia.SelectionChanged += new System.EventHandler(this.dgvdia_SelectionChanged);

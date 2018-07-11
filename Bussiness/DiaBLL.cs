@@ -68,5 +68,13 @@ namespace Bussiness
             dia.TinhTrangDia = text;
             db.SubmitChanges();
         }
+
+        public bool DiaVanConTot(int madia)
+        {
+            Dia dia = db.Dias.Where(x => x.MaDia == madia).FirstOrDefault();
+            if (dia.TinhTrangDia == "Good")
+                return true;
+            return false;
+        }
     }
 }

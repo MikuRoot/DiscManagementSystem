@@ -32,12 +32,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblmakhachhang = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txttenkhachhang = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtsodienthoai = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txttenkhachhang = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblmakhachhang = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnluu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -56,7 +56,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 90);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(869, 197);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -87,39 +90,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin của khách hàng";
             // 
-            // label1
+            // txtsodienthoai
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã khách hàng";
-            // 
-            // lblmakhachhang
-            // 
-            this.lblmakhachhang.AutoSize = true;
-            this.lblmakhachhang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmakhachhang.Location = new System.Drawing.Point(182, 43);
-            this.lblmakhachhang.Name = "lblmakhachhang";
-            this.lblmakhachhang.Size = new System.Drawing.Size(0, 16);
-            this.lblmakhachhang.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên khách hàng";
-            // 
-            // txttenkhachhang
-            // 
-            this.txttenkhachhang.Location = new System.Drawing.Point(419, 40);
-            this.txttenkhachhang.Name = "txttenkhachhang";
-            this.txttenkhachhang.Size = new System.Drawing.Size(177, 23);
-            this.txttenkhachhang.TabIndex = 3;
+            this.txtsodienthoai.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsodienthoai.Location = new System.Drawing.Point(724, 40);
+            this.txtsodienthoai.Name = "txtsodienthoai";
+            this.txtsodienthoai.Size = new System.Drawing.Size(151, 23);
+            this.txtsodienthoai.TabIndex = 5;
+            this.txtsodienthoai.Click += new System.EventHandler(this.txtsodienthoai_Click);
+            this.txtsodienthoai.TextChanged += new System.EventHandler(this.txtsodienthoai_TextChanged);
             // 
             // label3
             // 
@@ -130,17 +109,44 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Số điện thoại";
             // 
-            // txtsodienthoai
+            // txttenkhachhang
             // 
-            this.txtsodienthoai.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsodienthoai.Location = new System.Drawing.Point(724, 40);
-            this.txtsodienthoai.Name = "txtsodienthoai";
-            this.txtsodienthoai.Size = new System.Drawing.Size(151, 23);
-            this.txtsodienthoai.TabIndex = 5;
+            this.txttenkhachhang.Location = new System.Drawing.Point(419, 40);
+            this.txttenkhachhang.Name = "txttenkhachhang";
+            this.txttenkhachhang.Size = new System.Drawing.Size(177, 23);
+            this.txttenkhachhang.TabIndex = 3;
+            this.txttenkhachhang.Click += new System.EventHandler(this.txttenkhachhang_Click);
+            this.txttenkhachhang.TextChanged += new System.EventHandler(this.txttenkhachhang_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(306, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên khách hàng";
+            // 
+            // lblmakhachhang
+            // 
+            this.lblmakhachhang.AutoSize = true;
+            this.lblmakhachhang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmakhachhang.Location = new System.Drawing.Point(182, 43);
+            this.lblmakhachhang.Name = "lblmakhachhang";
+            this.lblmakhachhang.Size = new System.Drawing.Size(0, 16);
+            this.lblmakhachhang.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã khách hàng";
             // 
             // btnluu
             // 
-            this.btnluu.Enabled = false;
             this.btnluu.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnluu.Location = new System.Drawing.Point(566, 385);
             this.btnluu.Name = "btnluu";

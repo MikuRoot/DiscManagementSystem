@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btngetlist = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -54,6 +52,8 @@
             this.lblsoluongdat = new System.Windows.Forms.Label();
             this.lblsodienthoai = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
+            this.lblmadia = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -61,33 +61,15 @@
             this.grbgiucho.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(36, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(646, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Mã khách hàng";
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btngetlist
-            // 
-            this.btngetlist.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngetlist.Location = new System.Drawing.Point(688, 12);
-            this.btngetlist.Name = "btngetlist";
-            this.btngetlist.Size = new System.Drawing.Size(157, 23);
-            this.btngetlist.TabIndex = 1;
-            this.btngetlist.Text = "Lấy danh sách thuê đĩa";
-            this.btngetlist.UseVisualStyleBackColor = true;
-            this.btngetlist.Click += new System.EventHandler(this.btngetlist_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 22);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(533, 251);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(533, 321);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -95,15 +77,17 @@
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 61);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(546, 291);
+            this.groupBox1.Size = new System.Drawing.Size(546, 349);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách thuê đĩa";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.lblmadia);
             this.groupBox2.Controls.Add(this.lbltua);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.rdnotgood);
@@ -113,9 +97,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.lbltiendatcoc);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(555, 61);
+            this.groupBox2.Location = new System.Drawing.Point(555, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 291);
+            this.groupBox2.Size = new System.Drawing.Size(319, 349);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -342,6 +326,24 @@
             this.lblname.TabIndex = 1;
             this.lblname.Text = "Name";
             // 
+            // lblmadia
+            // 
+            this.lblmadia.AutoSize = true;
+            this.lblmadia.Location = new System.Drawing.Point(108, 49);
+            this.lblmadia.Name = "lblmadia";
+            this.lblmadia.Size = new System.Drawing.Size(0, 13);
+            this.lblmadia.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 14);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Đĩa số ";
+            // 
             // ucGhiNhanTraDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,8 +352,6 @@
             this.Controls.Add(this.btnluudulieu);
             this.Controls.Add(this.btnkhongthanhtoanphitre);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btngetlist);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbgiucho);
             this.Name = "ucGhiNhanTraDia";
@@ -365,14 +365,10 @@
             this.grbgiucho.ResumeLayout(false);
             this.grbgiucho.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btngetlist;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -397,5 +393,7 @@
         private System.Windows.Forms.Label lblsoluongdat;
         private System.Windows.Forms.Label lbltua;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblmadia;
+        private System.Windows.Forms.Label label5;
     }
 }

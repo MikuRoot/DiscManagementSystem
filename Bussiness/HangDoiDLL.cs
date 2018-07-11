@@ -71,7 +71,7 @@ namespace Bussiness
             HangDoi hangdoi = db.HangDois.Where(x => x.MaKhacHangs == makh && x.MaTuaDe == matua).FirstOrDefault();
             if(hangdoi!=null)
                 return (int)hangdoi.SoLuongDat;
-            return 0;
+            return 1;
         }
 
         public List<string> LayDanhSachMaTuaDe (string makhachhang)
@@ -85,5 +85,27 @@ namespace Bussiness
             return IDlist;
         }
 
+        public bool TangSoLuongDiaDat(string makhachhang, string matuade, int soluong)
+        {
+            HangDoi hangdoi = db.HangDois.Where(x => x.MaKhacHangs == makhachhang && x.MaTuaDe == matuade).FirstOrDefault();
+            try
+            {
+                hangdoi.SoLuongDat += soluong;
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        
+        public bool KhachHangDaDatCho(string makhachhang,string matuade)
+        {
+            HangDoi hangdoi = db.HangDois.Where(x => x.MaKhacHangs == makhachhang && x.MaTuaDe == matuade).FirstOrDefault();
+            if (hangdoi != null)
+                return true;
+            return false;
+        }
     }
 }

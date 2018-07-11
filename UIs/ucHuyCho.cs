@@ -59,8 +59,19 @@ namespace UIs
 
         private void btnhuycho_Click(object sender, EventArgs e)
         {
-            hangdoidll.GoHangDoi(txtmakhachhang.Text, comboBox1.SelectedValue.ToString());
-            txtmakhachhang.Clear();
+            if (txtmakhachhang.Text == ""||!khachhangbll.KiemTraTonTaiMaKhachHang(txtmakhachhang.Text))
+            {
+                txtmakhachhang.Text = "Vui lòng cung cấp mã khách hàng chính xác";
+            }
+            if (comboBox1.Text=="")
+            {
+                comboBox1.Text = "Không có tựa đề nào được đặt bởi khách hàng";
+            }
+            else if(comboBox1.ValueMember!=null)
+            {
+                hangdoidll.GoHangDoi(txtmakhachhang.Text, comboBox1.SelectedValue.ToString());
+                txtmakhachhang.Clear();
+            }
         }
     }
 }

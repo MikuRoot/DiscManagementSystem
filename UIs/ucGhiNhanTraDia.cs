@@ -45,17 +45,25 @@ namespace UIs
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Mã khách hàng" || textBox1.Text == "Không có mã khách hàng")
-            {
-                textBox1.Clear();
-            }
-        }
 
+        }
+        private static decimal sotiencoc = 0;
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                sotiencoc = (decimal)dataGridView1.CurrentRow.Cells[6].Value;
                 lbltiendatcoc.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                if (!diadll.DiaVanConTot((int)dataGridView1.CurrentRow.Cells[1].Value))
+                {
+                    rdnotgood.Checked = true;
+                    rdgood.Enabled = false;
+                }
+                if (diadll.DiaVanConTot((int)dataGridView1.CurrentRow.Cells[1].Value)){
+                    rdgood.Enabled = true;
+                    rdnotgood.Checked = false;
+                }
+                lblmadia.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 if (DateTime.Now > (DateTime)dataGridView1.CurrentRow.Cells[8].Value)
                 {
                     //10% tien dat coc + tien thue = tien phai tra bao gom phi tre :))
@@ -68,10 +76,14 @@ namespace UIs
                     //Khach hang phai tra tien thue = 20% tien dat coc
                     lbltongtienquykhachphaitra.Text = (((decimal)0.2 * ConvertStringToDecimal(lbltiendatcoc.Text))).ToString();
                 }
-                textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 lbltua.Text = tuadedll.GetTitleByID(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+
             }
         }
+
+        private int madia = 0;
+        private string matua = "";
+
 
         private void lbltongtienquykhachphaitra_TextChanged(object sender, EventArgs e)
         {
@@ -98,6 +110,8 @@ namespace UIs
             }
 
             nhatkythuediadll.ChinhTrangThaiThueDia((int)dataGridView1.CurrentRow.Cells[1].Value, "Available");
+            madia = (int)dataGridView1.CurrentRow.Cells[1].Value;
+            matua = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             nhatkythuediadll.TangSoLuong(dataGridView1.CurrentRow.Cells[4].Value.ToString());
             nhatkythuediadll.ChinhSuaTinhTrangTraDia((int)dataGridView1.CurrentRow.Cells[0].Value, "Da tra");
 
@@ -123,7 +137,6 @@ namespace UIs
         
         private void Load_Basic_Customer_Inf()
         {
-            string matua = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             List<eKhachHang> list = khachHangBLL.LayDSKhachHang(hangdoidll.GetIDCustomerList(matua));
             eKhachHang kh = list.FirstOrDefault();
             if (kh == null)
@@ -131,7 +144,7 @@ namespace UIs
                 lblname.Text = "";
                 lblsodienthoai.Text = "";
                 lblnext.Text = "";
-                label1.Text = "Không có hàng chờ cho tựa đề này";
+                label1.Text = "";
                 label1.Visible = true;
                 grbgiucho.Visible = false;
             }
@@ -139,31 +152,52 @@ namespace UIs
             {
                 lblname.Text = kh.TenKhachHang;
                 lblsodienthoai.Text = kh.Phone;
-                lblsoluongdat.Text = "Đặt "+hangdoidll.LaySoLuongDat(dataGridView1.CurrentRow.Cells[2].Value.ToString(), dataGridView1.CurrentRow.Cells[4].Value.ToString()).ToString()+ " đĩa";
+                lblsoluongdat.Text = "Đặt "+hangdoidll.LaySoLuongDat(khachHangBLL.LayMakh(lblname.Text,lblsodienthoai.Text), matua).ToString()+ " đĩa";
             }
         }
 
         private void lblnext_Click(object sender, EventArgs e)
         {
             nextbutton_click_count++;
-            List<eKhachHang> list = khachHangBLL.LayDSKhachHang(hangdoidll.GetIDCustomerList(dataGridView1.CurrentRow.Cells[4].Value.ToString()));
-            eKhachHang kh = list.Skip(1).Take(1).First();
-            if (kh == null)
+            List<eKhachHang> list = khachHangBLL.LayDSKhachHang(hangdoidll.GetIDCustomerList(matua));
+            
+            if (list.Count == 1)
             {
                 Load_Basic_Customer_Inf();
                 label1.Text = "Chỉ có một khách hàng trong hàng đợi";
                 label1.Visible = true;
             }
-            else if(kh!=null)
+            else if(list.Count > 1)
             {
-                lblname.Text = kh.TenKhachHang;
-                lblsodienthoai.Text = kh.Phone;
+                eKhachHang khachhangmoi = GetNextCustomer(list, lblname.Text, lblsodienthoai.Text);
+                lblname.Text = khachhangmoi.TenKhachHang;
+                lblsodienthoai.Text = khachhangmoi.Phone;
             }
             else if (nextbutton_click_count == list.Count - 1)
             {
                 Load_Basic_Customer_Inf();
                 nextbutton_click_count = 0;
             }
+        }
+
+        private eKhachHang GetNextCustomer(List<eKhachHang> listkhachhang,string TenKhachhanghientai,string sodienthoaikhachhanghientai)
+        {
+            int soluong_khachhang = listkhachhang.Count;
+            eKhachHang khachhang_tieptheo = new eKhachHang();
+            eKhachHang khachHang = listkhachhang.Skip(nextbutton_click_count-1).Take(1).First();
+            if (khachHang.TenKhachHang == TenKhachhanghientai && khachHang.Phone == sodienthoaikhachhanghientai)
+            {
+                if (nextbutton_click_count == soluong_khachhang)
+                {
+                    khachhang_tieptheo = listkhachhang.Take(1).First();
+                    nextbutton_click_count = 0;
+                }
+                else
+                {
+                    khachhang_tieptheo = listkhachhang.Skip(nextbutton_click_count).Take(1).First();
+                }
+            }
+            return khachhang_tieptheo;
         }
 
         private void lblprevious_Click(object sender, EventArgs e)
@@ -173,7 +207,7 @@ namespace UIs
 
         private void btngetlist_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = nhatkythuediadll.GetListByID(textBox1.Text);
+            
         }
 
         private decimal ConvertStringToDecimal(string text)
@@ -191,33 +225,36 @@ namespace UIs
             string makhachhang = khachHangBLL.LayMakh(lblname.Text, lblsodienthoai.Text);
             string matua = tuadedll.LayMaTua(lbltua.Text);
             hangdoidll.GiamSoLuongDat(makhachhang, matua);
-            if (hangdoidll.LaySoLuongDat(makhachhang, matua) == 0)
+            if (hangdoidll.LaySoLuongDat(makhachhang, matua) == 0 || hangdoidll.LaySoLuongDat(makhachhang, matua) == 1)//neu so luong dat =0 thi co the go hang doi,neu >0 thi phai giam hang doi,khong duoc go bo
             {
                 hangdoidll.GoHangDoi(khachHangBLL.LayMakh(lblname.Text, lblsodienthoai.Text), matua);
             }
+            //Khi giu cho thi se go hang doi khoi hang cho va cho thue dia truc tiep
             //task thue dia o day
             eNhatKyThueDia newdiary = new eNhatKyThueDia();
-            newdiary.MaDia = (int)dataGridView1.CurrentRow.Cells[1].Value;//sửa lại,thêm vào form label để chứa tạm cái id đĩa và gán label đó vào đây
+            newdiary.MaDia = madia;
             newdiary.MaKhachHang = makhachhang;
             newdiary.MaTua = matua;
             newdiary.NgayChoThue = DateTime.Now;
             newdiary.NgayTraDia = DateTime.Now.AddDays(2);
             newdiary.PhiTreHen = 0;
-            newdiary.TienDatCoc = (decimal)dataGridView1.CurrentRow.Cells[6].Value;//như trên
+            newdiary.TienDatCoc = sotiencoc;
             newdiary.SoLuongThue = 1;
+            nhatkythuediadll.GiamSoLuong(matua);
             if (nhatkythuediadll.Save_Disc_Hire_Diary(newdiary))
             {
                 button1.Enabled = false;
-                List<eKhachHang> list = khachHangBLL.LayDSKhachHang(hangdoidll.GetIDCustomerList(dataGridView1.CurrentRow.Cells[4].Value.ToString()));
-                eKhachHang kh = list.Skip(1).Take(1).First();
-                if (kh == null)
+                List<eKhachHang> list = khachHangBLL.LayDSKhachHang(hangdoidll.GetIDCustomerList(matua));
+                //bug cho nay,chuoi nay bi null do statement phía trên,list bị rỗng
+                if (list.Count == 0)
                 {
                     Load_Basic_Customer_Inf();
-                    label1.Text = "Chỉ có một khách hàng trong hàng đợi";
+                    label1.Text = "Không còn khách hàng trong hàng chờ";
                     label1.Visible = true;
                 }
                 else
                 {
+                    eKhachHang kh = list.Skip(nextbutton_click_count).Take(1).First();
                     lblname.Text = kh.TenKhachHang;
                     lblsodienthoai.Text = kh.Phone;
                 }
@@ -229,7 +266,7 @@ namespace UIs
             string matua = tuadedll.LayMaTua(lbltua.Text);
             hangdoidll.GoHangDoi(khachHangBLL.LayMakh(lblname.Text, lblsodienthoai.Text), matua);
             List<eKhachHang> list = khachHangBLL.LayDSKhachHang(hangdoidll.GetIDCustomerList(matua));
-            eKhachHang kh = list.Skip(1).Take(1).First();
+            eKhachHang kh = list.Skip(nextbutton_click_count).Take(1).First();//nho set lai nextbutton_click_count khi no bang voi list.count thi nextbutton_click_count se = 0
             if (kh == null)
             {
                 Load_Basic_Customer_Inf();

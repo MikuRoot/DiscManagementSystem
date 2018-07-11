@@ -98,5 +98,21 @@ namespace Bussiness
             return tuade.MaTuaDe;
         }
 
+        public eTuaDe LayThongTinTuaDe(string matuade)
+        {
+            TuaDe tuade = db.TuaDes.Where(x => x.MaTuaDe == matuade).FirstOrDefault();
+            return TranformToClassType_tuade(tuade);
+        }
+
+        public eTuaDe TranformToClassType_tuade(TuaDe tuade)
+        {
+            eTuaDe etuade = new eTuaDe();
+            etuade.ImageUrl = tuade.ImageUrl;
+            etuade.MaLoai = tuade.MaLoai;
+            etuade.MaTuaDe = tuade.MaTuaDe;
+            etuade.NoiDungTuaDe = tuade.NoiDungTuaDe;
+            etuade.SoLuongDia = (int)tuade.SoLuongDia;
+            return etuade;
+        }
     }
 }

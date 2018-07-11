@@ -53,7 +53,10 @@
             // 
             this.dgvtuade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvtuade.Location = new System.Drawing.Point(3, 3);
+            this.dgvtuade.MultiSelect = false;
             this.dgvtuade.Name = "dgvtuade";
+            this.dgvtuade.ReadOnly = true;
+            this.dgvtuade.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvtuade.Size = new System.Drawing.Size(871, 150);
             this.dgvtuade.TabIndex = 0;
             this.dgvtuade.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtuade_CellContentClick);
@@ -94,10 +97,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(61, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 18);
+            this.label4.Size = new System.Drawing.Size(118, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Số lượng đặt đĩa";
-            this.label4.Visible = false;
             // 
             // numericUpDown1
             // 
@@ -105,7 +107,6 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(191, 26);
             this.numericUpDown1.TabIndex = 9;
-            this.numericUpDown1.Visible = false;
             // 
             // lblloaidia
             // 
@@ -120,7 +121,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(61, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 18);
+            this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Loại đĩa";
             // 
@@ -182,7 +183,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 18);
+            this.label2.Size = new System.Drawing.Size(139, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Số lượng đĩa còn lại";
             // 
@@ -199,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(61, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 18);
+            this.label1.Size = new System.Drawing.Size(118, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nội dung tựa đề";
             // 

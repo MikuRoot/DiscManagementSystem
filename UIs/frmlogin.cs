@@ -43,6 +43,7 @@ namespace UIs
             {
                 this.Hide();
                 frmAdmin adminpage = new frmAdmin();
+                frmAdmin.signal = "Access grand";
                 adminpage.ShowDialog();
             }
         }

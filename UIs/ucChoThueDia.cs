@@ -84,7 +84,7 @@ namespace UIs
 
         private void txtmakhachhang_Click(object sender, EventArgs e)
         {
-            if (txtmakhachhang.Text == "Mã khách hàng muốn thuê" || txtmakhachhang.Text == "" || txtmakhachhang.Text == "Không được để trống" || txtmakhachhang.Text== "Vui lòng cung cấp mã khách hàng" || txtmakhachhang.Text== "Mã khách hàng không tồn tại")
+            if (txtmakhachhang.Text == "Nhập mã khách hàng muốn thuê" || txtmakhachhang.Text == "Không được để trống" || txtmakhachhang.Text== "Vui lòng cung cấp mã khách hàng" || txtmakhachhang.Text== "Mã khách hàng không tồn tại")
             {
                 txtmakhachhang.Clear();
             }
@@ -222,6 +222,22 @@ namespace UIs
             {
                 btnthanhtoanphimuon.Enabled = false;
             }   
+        }
+
+        private void txtmakhachhang_Leave(object sender, EventArgs e)
+        {
+            if (txtmakhachhang.Text == "")
+            {
+                txtmakhachhang.Text = "Nhập mã khách hàng muốn thuê";
+            }
+        }
+
+        private void txtmakhachhang_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtmakhachhang.Text == "")
+            {
+                txtmakhachhang.Text = "Nhập mã khách hàng muốn thuê";
+            }
         }
     }
 }

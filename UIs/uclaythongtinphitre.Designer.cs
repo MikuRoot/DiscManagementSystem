@@ -32,8 +32,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtmakhachhang = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblloaidia = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblsodienthoaikhachhang = new System.Windows.Forms.Label();
             this.lbltenkhachhang = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,9 +53,9 @@
             // 
             // btnlaydsphitre
             // 
-            this.btnlaydsphitre.Location = new System.Drawing.Point(756, 8);
+            this.btnlaydsphitre.Location = new System.Drawing.Point(748, 8);
             this.btnlaydsphitre.Name = "btnlaydsphitre";
-            this.btnlaydsphitre.Size = new System.Drawing.Size(115, 21);
+            this.btnlaydsphitre.Size = new System.Drawing.Size(115, 36);
             this.btnlaydsphitre.TabIndex = 24;
             this.btnlaydsphitre.Text = "Lấy danh sách phí trễ";
             this.btnlaydsphitre.UseVisualStyleBackColor = true;
@@ -65,7 +65,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 64);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(457, 129);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -73,7 +76,7 @@
             // txtmakhachhang
             // 
             this.txtmakhachhang.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmakhachhang.Location = new System.Drawing.Point(13, 8);
+            this.txtmakhachhang.Location = new System.Drawing.Point(13, 17);
             this.txtmakhachhang.Name = "txtmakhachhang";
             this.txtmakhachhang.Size = new System.Drawing.Size(729, 20);
             this.txtmakhachhang.TabIndex = 21;
@@ -103,30 +106,13 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thông tin chi tiết";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(499, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Ảnh của đĩa";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(479, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(392, 625);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(20, 202);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 18);
+            this.label8.Size = new System.Drawing.Size(63, 18);
             this.label8.TabIndex = 7;
             this.label8.Text = "Loại đĩa";
             // 
@@ -136,7 +122,7 @@
             this.lblloaidia.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblloaidia.Location = new System.Drawing.Point(223, 202);
             this.lblloaidia.Name = "lblloaidia";
-            this.lblloaidia.Size = new System.Drawing.Size(61, 18);
+            this.lblloaidia.Size = new System.Drawing.Size(63, 18);
             this.lblloaidia.TabIndex = 7;
             this.lblloaidia.Text = "Loại đĩa";
             // 
@@ -156,7 +142,7 @@
             this.label7.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(20, 163);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 18);
+            this.label7.Size = new System.Drawing.Size(60, 18);
             this.label7.TabIndex = 7;
             this.label7.Text = "Tựa đĩa";
             // 
@@ -166,7 +152,7 @@
             this.lbltuade.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltuade.Location = new System.Drawing.Point(223, 163);
             this.lbltuade.Name = "lbltuade";
-            this.lbltuade.Size = new System.Drawing.Size(58, 18);
+            this.lbltuade.Size = new System.Drawing.Size(60, 18);
             this.lbltuade.TabIndex = 7;
             this.lbltuade.Text = "Tựa đĩa";
             // 
@@ -186,7 +172,7 @@
             this.label6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(20, 124);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 18);
+            this.label6.Size = new System.Drawing.Size(122, 18);
             this.label6.TabIndex = 7;
             this.label6.Text = "Mã đĩa bị trả trễ";
             // 
@@ -216,7 +202,7 @@
             this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(20, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 18);
+            this.label5.Size = new System.Drawing.Size(182, 18);
             this.label5.TabIndex = 7;
             this.label5.Text = "Số điện thoại khách hàng";
             // 
@@ -226,7 +212,7 @@
             this.lblsodienthoaikhachhang.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsodienthoaikhachhang.Location = new System.Drawing.Point(223, 85);
             this.lblsodienthoaikhachhang.Name = "lblsodienthoaikhachhang";
-            this.lblsodienthoaikhachhang.Size = new System.Drawing.Size(181, 18);
+            this.lblsodienthoaikhachhang.Size = new System.Drawing.Size(182, 18);
             this.lblsodienthoaikhachhang.TabIndex = 7;
             this.lblsodienthoaikhachhang.Text = "Số điện thoại khách hàng";
             // 
@@ -239,6 +225,23 @@
             this.lbltenkhachhang.Size = new System.Drawing.Size(120, 18);
             this.lbltenkhachhang.TabIndex = 7;
             this.lbltenkhachhang.Text = "Tên khách hàng";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(499, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Ảnh của đĩa";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(479, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(392, 625);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // uclaythongtinphitre
             // 
